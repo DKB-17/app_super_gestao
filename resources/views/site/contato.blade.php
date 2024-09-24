@@ -1,4 +1,4 @@
-@extends('site.layouts.basico');
+@extends('site.layouts.basico')
 
 @section('titulo', $titulo)
 
@@ -11,7 +11,9 @@
 
         <div class="informacao-pagina">
             <div class="contato-principal">
-                @component('site.layouts._components.form_contato')
+                @component('site.layouts._components.form_contato',['classe' => 'borda-preta'])
+                    <p>A nossa equipe analisara a sua mensagem e retornaremos o mais brevemente possivel</p>
+                    <p>Nosso tempo médio de resposta é de 48 horas.</p>
                 @endcomponent
             </div>
         </div>
