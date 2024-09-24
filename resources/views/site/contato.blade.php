@@ -12,6 +12,7 @@
         <div class="informacao-pagina">
             <div class="contato-principal">
                 <form action="{{route('site.contato')}}" method="POST"> 
+                    <!--CROSS-SITE REQUEST FORGERY ou FALSIFICAÇÃO DE SOLICITAÇÃO ENTRE SITES-->
                     @csrf <!--TOKEN DE VALIDACAO DO BLADE-->
                     <input type="text" placeholder="Nome" class="borda-preta" name="nome">
                     <br>
