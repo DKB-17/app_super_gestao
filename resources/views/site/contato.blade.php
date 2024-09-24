@@ -11,7 +11,8 @@
 
         <div class="informacao-pagina">
             <div class="contato-principal">
-                <form action="{{route('site.contato')}}" method="GET"> 
+                <form action="{{route('site.contato')}}" method="POST"> 
+                    @csrf <!--TOKEN DE VALIDACAO DO BLADE-->
                     <input type="text" placeholder="Nome" class="borda-preta" name="nome">
                     <br>
                     <input type="text" placeholder="Telefone" class="borda-preta" name="telefone">
