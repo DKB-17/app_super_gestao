@@ -4,21 +4,6 @@
 @section('titulo', 'Sobre nos')
 
 @section('conteudo')
-    <div class="topo">
-
-        <div class="logo">
-            <!--<img src="img/logo.png">-->
-            <img src="{{ asset('img/logo.png') }}">
-        </div>
-
-        <div class="menu">
-            <ul>
-                <li><a href="{{ route('site.index') }}">Principal</a></li>
-                <li><a href="{{ route('site.sobrenos') }}">Sobre Nós</a></li>
-                <li><a href="{{ route('site.contato') }}">Contato</a></li>
-            </ul>
-        </div>
-    </div>
 
     <div class="conteudo-pagina">
         <div class="titulo-pagina">
@@ -36,10 +21,10 @@
         <div class="redes-sociais">
             <h2>Redes sociais</h2>
             <!--
-                    <img src="img/facebook.png">
-                    <img src="img/linkedin.png">
-                    <img src="img/youtube.png">
-                    -->
+                        <img src="img/facebook.png">
+                        <img src="img/linkedin.png">
+                        <img src="img/youtube.png">
+                        -->
             <img src="{{ asset('img/facebook.png') }}">
             <img src="{{ asset('img/linkedin.png') }}">
             <img src="{{ asset('img/youtube.png') }}">
