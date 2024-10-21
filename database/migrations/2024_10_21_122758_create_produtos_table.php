@@ -13,7 +13,7 @@ class CreateProdutoTable extends Migration
      */
     public function up()
     {
-        Schema::create('produto', function (Blueprint $table) {
+        Schema::create('produtos', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 100);
             $table->text('descricao')->nullable();
