@@ -16,7 +16,7 @@ class ContatoController extends Controller
     public function contato(Request $request){
 
         //var_dump($_POST);
-        dd($request->all());
+        print_r($request->all());
         return view('site.contato', ['titulo' => 'Contato (teste)']);
     }
 }
