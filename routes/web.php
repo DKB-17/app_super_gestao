@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::get('/sobre-nos', 'SobreNosController@sobreNos')->name('site.sobrenos');
 
 Route::get('/contato', 'ContatoController@contato')->name('site.contato');
-Route::post('/contato', 'ContatoController@contato')->name('site.contato');
+Route::post('/contato', 'ContatoController@salvar')->name('site.contato');
 
 
 Route::get('/login', function(){return "Login";})->name('site.login');
@@ -68,8 +68,8 @@ Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function(string $
 /*
 Route::get('/contato/{nome?}/{categoria?}/{assunto?}/{mensagem?}', function(
     string $nome = 'sem nome',
-    string $categoria = 'sem categoria', 
-    string $assunto = 'sem assunto', 
+    string $categoria = 'sem categoria',
+    string $assunto = 'sem assunto',
     string $mensagem = 'mensagem nao enviada')
     {
     echo "Estamos aqui: - $nome - $categoria - $assunto - $mensagem";
@@ -90,14 +90,14 @@ function(
 
 /**
  * Route::get($uri, $callback)
- * 
+ *
  * Verbos http
- * 
+ *
  * get
  * post
  * put
  * patch
  * delete
  * options
- * 
+ *
  */
