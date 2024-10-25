@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         // realizou uma chamada da seeder FornecedorSeeder
         $this->call(FornecedorSeeder::class);
         $this->call(SiteContatoSeeder::class);
+        $this->call(MotivoContatoSeeder::class);
     }
 }
