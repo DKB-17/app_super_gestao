@@ -46,7 +46,13 @@ class ContatoController extends Controller
         $contato->create($request->all());
         */
 
-        return view('site.contato', ['titulo' => 'Contato']);
+        $motivo_contatos = [
+            '1' => 'Duvida',
+            '2' => 'Elogio',
+            '3' => 'Reclamação'
+        ];
+
+        return view('site.contato', ['titulo' => 'Contato', 'motivo_contatos' => $motivo_contatos]);
 
     }
 
