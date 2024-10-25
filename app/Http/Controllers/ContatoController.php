@@ -45,21 +45,23 @@ class ContatoController extends Controller
 
         $contato->create($request->all());
         */
-        return view('site.contato', ['titulo' => 'Contato (teste)']);
+
+        return view('site.contato', ['titulo' => 'Contato']);
 
     }
 
-    public function salvar(Request $request){
+    public function salvar(Request $request) {
+
         //realizar a validacao dos dados do formulario recebidos no request
         $request->validate([
-            'nome' => 'required',
+            'nome' => 'required|min:3|max:40', // omes com no minimo 3 caracteres e no maximo 40 caracteres
             'telefone' => 'required',
             'email' => 'required',
             'motivo_contato' => 'required',
-            'mensagem' => 'required'
+            'mensagem' => 'required|max:2000'
         ]);
-        SiteContato()::create($request->all());
-        return view('site.contato', ['titulo' => 'Contato (teste)']);
+        SiteContato::create($request->all());
+        return view('site.contato', ['titulo' => 'Contato']);
     }
 
 }
