@@ -57,7 +57,7 @@ class ContatoController extends Controller
 
         //realizar a validacao dos dados do formulario recebidos no request
         $request->validate([
-            'nome' => 'required|min:3|max:40', // omes com no minimo 3 caracteres e no maximo 40 caracteres
+            'nome' => 'required|min:3|max:40|unique:site_contatos', // omes com no minimo 3 caracteres e no maximo 40 caracteres
             'telefone' => 'required',
             'email' => 'email',
             'motivo_contatos_id' => 'required',
