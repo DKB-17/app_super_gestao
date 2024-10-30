@@ -60,11 +60,11 @@ class ContatoController extends Controller
             'nome' => 'required|min:3|max:40', // omes com no minimo 3 caracteres e no maximo 40 caracteres
             'telefone' => 'required',
             'email' => 'email',
-            'motivo_contato' => 'required',
+            'motivo_contatos_id' => 'required',
             'mensagem' => 'required|max:2000'
         ]);
         SiteContato::create($request->all());
-        return view('site.contato', ['titulo' => 'Contato']);
+        return redirect()->route('site.index');
     }
 
 }
