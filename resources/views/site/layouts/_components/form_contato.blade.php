@@ -26,7 +26,7 @@
 </form>
 
 @if($errors->any())
-    <div style="position:absolute; top: 0px; left: 0px; width: 100%; background: red">
+    <div style="position:absolute; top: 0; left: 0; width: 100%; background: red">
 
         @foreach($errors->all() as $erro)
             {{ $erro }}
