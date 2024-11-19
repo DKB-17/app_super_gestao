@@ -15,7 +15,8 @@ use App\Http\Middleware\LogAcessoMiddleware;
 */
 
 Route::get('/', 'PrincipalController@principal')
-    ->name('site.index');
+    ->name('site.index')
+    ->middleware('log.acesso');
 
 /*
 Route::get('/', function () {
