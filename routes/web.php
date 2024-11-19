@@ -65,6 +65,9 @@ Route::fallback(function(){
     echo 'Aa rota acessada nao exite. <a href="'.route('site.index').'">clique aqui</a> para ir a pagina inicial';
 });
 
+Route::resource('produto', 'ProdutoController');
+
+
 //Route::redirect('/rota2','/rota1');
 
 
