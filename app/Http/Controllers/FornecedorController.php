@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class FornecedorController extends Controller
 {
     public function index(){
+        /*
         $fornecedores = [0 => ['nome' => 'Fornecedor1',
                                 'status' => 'N',
                                 'cnpj' => '00.000.000/0000-00',
@@ -32,8 +33,11 @@ class FornecedorController extends Controller
         $msg = isset($fornecedores[2]['cnpj'])?"CNPJ informado":"CNPJ não informado";
         echo $msg;
 
-        //$fornecedores = [];             
+        //$fornecedores = [];
 
         return view('app.fornecedor.index',compact('fornecedores'));
+        */
+
+        return view('app.fornecedor');
     }
 }
