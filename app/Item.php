@@ -21,6 +21,6 @@ class Item extends Model
     }
 
     public function pedidos(){
-        return $this->belongsToMany('App\Pedido', 'pedido_produtos', 'produto_id', 'pedido_id')->withPivot('create_at');
+        return $this->belongsToMany('App\Pedido', 'pedido_produtos', 'produto_id', 'pedido_id')->withPivot('create_at', 'updated_at');
     }
 }
