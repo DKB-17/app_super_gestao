@@ -19,4 +19,8 @@ class Item extends Model
     {
         return $this->belongsTo('App\Fornecedor', 'fornecedor_id', 'id');
     }
+
+    public function pedidos(){
+        return $this->belongsToMany('App\Pedido', 'pedido_produtos', 'produto_id', 'pedido_id')->withPivot('create_at');
+    }
 }
